@@ -319,15 +319,15 @@ def render_metrics() -> None:
     )
 
 
-def render_assignment_checklist() -> None:
-    """Render the assignment-specific demo guidance and mandatory queries."""
-    st.markdown('<div class="section-title">Assignment Checklist</div>', unsafe_allow_html=True)
-    st.info(
-        "For the video demo: upload the textbook, show chunk and embedding previews, "
-        "show the local FAISS index files, and then ask the five mandatory questions exactly as provided."
-    )
-    for index, query in enumerate(MANDATORY_QUERIES, start=1):
-        st.write(f"{index}. {query}")
+# def render_assignment_checklist() -> None:
+#     """Render the assignment-specific demo guidance and mandatory queries."""
+#     st.markdown('<div class="section-title">Assignment Checklist</div>', unsafe_allow_html=True)
+#     st.info(
+#         "For the video demo: upload the textbook, show chunk and embedding previews, "
+#         "show the local FAISS index files, and then ask the five mandatory questions exactly as provided."
+#     )
+#     for index, query in enumerate(MANDATORY_QUERIES, start=1):
+#         st.write(f"{index}. {query}")
 
 
 def render_backend_verification(persist_dir: str) -> None:
@@ -498,7 +498,7 @@ def main() -> None:
     left_col, right_col = st.columns([1.05, 1], gap="large")
 
     with left_col:
-        render_assignment_checklist()
+        # render_assignment_checklist()
         render_backend_verification(persist_dir)
         render_chunk_preview(st.session_state.chunk_preview)
         render_embedding_preview(st.session_state.embedding_preview)
