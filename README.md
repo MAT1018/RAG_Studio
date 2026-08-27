@@ -15,7 +15,7 @@ It includes:
 ## Project Structure
 
 ```text
-RAG_Assignment/
+RAG_Studio/
 ├── ingest.py
 ├── chunking.py
 ├── embed.py
