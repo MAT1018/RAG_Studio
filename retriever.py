@@ -11,7 +11,7 @@ from langchain_core.documents import Document
 
 logger = logging.getLogger(__name__)
 
-TOP_K = 3
+TOP_K = 10
 
 
 def retrieve_relevant_chunks(
